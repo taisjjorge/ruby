@@ -1,0 +1,20 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Minhas leituras 2023</h1>
+
+<div id="posts">
+  <% @posts.each do |post| %>
+    <%= render post %>
+    <p>
+      <%= link_to "Show this post", post %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New post", new_post_path %>
+<a style="border: 2px solid #000; border-radius: 5px; padding: 5px; margin: 10px" href="/" 
+  onMouseOver="this.style.color='#fff';this.style.backgroundColor='#000'"
+  onMouseOut="this.style.color='#000'; this.style.backgroundColor='#fff'"
+>
+  voltar
+</a>
